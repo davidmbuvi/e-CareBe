@@ -1,5 +1,6 @@
 /* eslint-disable no-undef */
 const app = require('./app');
+const debug =require('debug');
 
 // Port Normalization
 const normalizePort = (val) => {
@@ -25,4 +26,6 @@ const server = app.listen(port, () => {
 	const bind = typeof host === 'string' ? `pipe ${address}` : `port: ${port}`;
 	// eslint-disable-next-line no-console
 	console.log(`listening on ${bind}`);
+	  debug("Listening on "+ bind); //checking bug
+
 });
